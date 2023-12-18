@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id            String         @id
+  orders        Order[]
+  loyaltyPoints LoyaltyPoint[]
+  createdAt     DateTime       @default(now())
+  deletedAt     DateTime?
+}
+
+model EventLog {
+  id         String    @id @default(uuid())
+  eventTime  DateTime
+  eventName  String
+  entityName String
+  sequence   Int
+  processed  Boolean   @default(false)
+  payload    String
+  createdAt  DateTime  @default(now())
+  lockedAt   DateTime?
+}
+
+model Order {
+  id               String         @id
+  totalOrderAmount Int?
+  customerId       String?
+  customer         Customer?      @relation(fields: [customerId], references: [id])
+  loyaltyPoints    LoyaltyPoint[]
+  createdAt        DateTime       @default(now())
+  deletedAt        DateTime?
+  returnedAt       DateTime?
+}
+
+model LoyaltyPoint {
+  id         String    @id @default(uuid())
+  points     Int
+  spent      Int
+  consumed   Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  expiresAt  DateTime
+  deletedAt  DateTime?
+  customerId String
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  orderId    String?
+  order      Order?    @relation(fields: [orderId], references: [id])
+}

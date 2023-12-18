@@ -1,0 +1,11 @@
+{
+  "EventTime": "2023-11-16T12:24:45+01:00",
+  "EventName": "OrderPlaced",
+  "EntityName": "Order",
+  "Sequence": 10,
+  "Payload": {
+    "OrderId": "c5df8e6f-eee3-4b07-897e-81832b664fc6",
+    "CustomerId": "814e496d-c6d1-49d5-b30b-359b4f83fa48",
+    "TotalOrderAmount": 5304
+  }
+}

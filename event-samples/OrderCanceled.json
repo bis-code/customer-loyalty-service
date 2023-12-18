@@ -1,0 +1,9 @@
+{
+  "EventTime": "2023-11-14T09:57:52+01:00",
+  "EventName": "OrderCanceled",
+  "EntityName": "Order",
+  "Sequence": 2,
+  "Payload": {
+    "OrderId": "671eac98-7d4d-47fb-bd07-dee2c3a14d11"
+  }
+}

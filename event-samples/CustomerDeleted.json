@@ -1,0 +1,9 @@
+{
+  "EventTime": "2023-11-20T00:57:57+01:00",
+  "EventName": "CustomerDeleted",
+  "EntityName": "Customer",
+  "Sequence": 2,
+  "Payload": {
+    "CustomerId": "814e496d-c6d1-49d5-b30b-359b4f83fa48"
+  }
+}

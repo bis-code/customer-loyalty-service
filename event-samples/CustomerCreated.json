@@ -1,0 +1,9 @@
+{
+  "EventTime": "2023-11-13T21:03:10Z",
+  "EventName": "CustomerCreated",
+  "EntityName": "Customer",
+  "Sequence": 1,
+  "Payload": {
+    "CustomerId": "814e496d-c6d1-49d5-b30b-359b4f83fa48"
+  }
+}
