@@ -28,10 +28,10 @@ Handles events like:
 
 **Loyalty Points:** Earn 1 point for every 50 kroner spent via **OrderPlaced** events. Points persist unless an **OrderCancelled** or **OrderReturned** event occurs.
 
-### 2. Check Points (`/{customerId}/points`)
+### 2. Check Points (`/customer/{customerId}/points`)
 Retrieve a customer's current loyalty points total.
 
-### 3. Consume Points (`/{customerId}/consume`)
+### 3. Consume Points (`/customer/{customerId}/consume`)
 Deduct a specified number of loyalty points, returning the updated balance.
 
 ---
